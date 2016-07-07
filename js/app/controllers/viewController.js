@@ -18,7 +18,7 @@ var ViewController = function(){
 
 // Init views
 ViewController.prototype.init = function() {
-	
+
 	// Create all views
 	this.views = {
 		'home': new Home(),
@@ -33,7 +33,7 @@ ViewController.prototype.init = function() {
 
 // Bind
 ViewController.prototype.bind = function() {
-	
+
 	// Listen to the router for navigate event
 	app.router._onNavigate.add( this.onNavigate, this );
 
@@ -41,7 +41,7 @@ ViewController.prototype.bind = function() {
 
 // On navigate
 ViewController.prototype.onNavigate = function(e) {
-	
+
 	var view = e.view;
 
 	// Go to next view
@@ -116,7 +116,7 @@ ViewController.prototype.goTo = function( nextView ) {
 
 		// Animate in next view
 		this.nextView.animateIn( this.currentView );
-		
+
 		// Dispatch navigation event
 		this._onNavigate.dispatch({
 			from: this.currentView,
@@ -137,7 +137,7 @@ ViewController.prototype.goTo = function( nextView ) {
 };
 
 ViewController.prototype.onViewLoadComplete = function(e) {
-	
+
 	this.nextView._onViewLoadComplete.remove( this.onViewLoadComplete );
 
 	this._onViewLoadComplete.dispatch(e);
@@ -148,8 +148,8 @@ ViewController.prototype.onViewLoadComplete = function(e) {
 
 	}
 
-	this.goTo( this.nextView );	
-	
+	this.goTo( this.nextView );
+
 };
 
 // Once next view has been animated in
@@ -168,7 +168,7 @@ ViewController.prototype.onViewAnimateIn = function() {
 
 // Bind navigation links
 ViewController.prototype.bindNavLinks = function() {
-	
+
 	$('a').not('[target="_blank"]').off('click').on('click', $.proxy(this.onNavLinkClick, this));
 
 };
@@ -182,10 +182,16 @@ ViewController.prototype.onNavLinkClick = function(e) {
 	// Get url of clicked link
 	var url = $(e.currentTarget).attr('href');
 
+	// Router, YOU HAVE ONE JOB.
+	if ( !this.isBusy && url.indexOf("mailto") > -1 ) {
+
+		window.location.href = url;
+
+	}
 	// If navigation is not busy and url is a valid link
-	if ( !this.isBusy && url != '#' ){
-	
-		// Navigate to the new url		
+	else if ( !this.isBusy && url != '#' ){
+
+		// Navigate to the new url
 		app.router.navigate( url );
 
 	}

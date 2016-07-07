@@ -8,6 +8,7 @@ html, body {
   -moz-font-smoothing: antialiased;
   -ms-font-smoothing: antialiased;
   font-smoothing: antialiased;
+  overflow: hidden;
 }
 
 html, body, #main {
@@ -18,6 +19,10 @@ html, body, #main {
 body {
   color: $black;
   font-family: $brandon;
+}
+
+a {
+  color: #F5F5F5;
 }
 
 .scene {

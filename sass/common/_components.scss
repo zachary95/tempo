@@ -27,3 +27,36 @@
   background-image: url('../img/icon-headphone.svg');
   width: 33px; height: 24px;
 }
+
+/*
+** Info Popover —
+*/
+.info {
+  transform: translateX(250px) translateY(250px);
+  height: 300px; width: 300px;
+  padding: 10px;
+  bottom: 0; right: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: 9999;
+  display: block;
+  transition: transform .4s;
+  transform-origin: bottom right;
+  color: #FFF;
+  &:hover {
+    transform: rotateZ(-360deg) translateX(0) translateY(0);
+    background: $black;
+    svg {
+      fill: #FFF;
+    }
+  }
+  p {
+    text-align: center;
+    margin: 0;
+    white-space: pre-line;
+  }
+  em {
+    font-size: .8em;
+  }
+}
+
