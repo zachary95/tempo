@@ -1,0 +1,83 @@
+#home {
+  display: flex;
+  align-items: center;
+  .home__container {
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    img {
+      margin: 0 auto;
+      padding: 0 200px 18px;
+      border-bottom: 2px solid #858585;
+      opacity: 0;
+    }
+    .home__headline {
+      font-family: 'Brandon Grotesque Light';
+      font-size: 28px;
+      text-align: center;
+      margin: 15px 0 60px 0;
+      opacity: 0;
+    }
+    .home__buttons {
+      width: 200px;
+      margin: 0 auto;
+      .home__button {
+        font-family: 'Brandon Grotesque Light';
+        font-size: 25px;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #a9a9a9;
+        padding: 5px 60px 4px;
+        border: 1px solid #a9a9a9;
+        opacity: 0;
+        transition: color ease-in-out 0.5s, border-color ease-in-out 0.5s;
+      }
+    }
+  }
+  //circles and animation
+  .rounds {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    left: 50%;
+    z-index: 1;
+    transform: translate(-100px, -100px);
+    > div {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border: 2px solid $green;
+      opacity: 0;
+      z-index: 0;
+      animation: roundsAreGrowing 10s infinite linear;
+    }
+    .round-1 {
+      animation-delay: 2s;
+    }
+    .round-2 {
+      animation-delay: 4s;
+    }
+    .round-3 {
+      animation-delay: 6s;
+    }
+    .round-4 {
+      animation-delay: 8s;
+    }
+    .round-5 {
+      animation-delay: 10s;
+    }
+  }
+}
+
+@keyframes roundsAreGrowing {
+  0% {
+    opacity: 1;
+    transform: scale(0.1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2.5);
+  }
+}

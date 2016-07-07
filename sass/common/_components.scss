@@ -1,0 +1,29 @@
+.button{
+}
+
+/*
+** Icons —
+*/
+
+.icon-headphones,
+.icon-love,
+.icon-music {
+  display: inline-block;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.icon-music {
+  background-image: url('../img/icon-music.svg');
+  width: 8px; height: 24px;
+}
+
+.icon-love {
+  background-image: url('../img/icon-love.svg');
+  width: 26px; height: 24px;
+}
+
+.icon-headphones {
+  background-image: url('../img/icon-headphone.svg');
+  width: 33px; height: 24px;
+}

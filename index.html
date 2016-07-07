@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>Tempo</title>
+
+    <!-- SEO meta -->
+    <meta name="robots" content="index, follow" />
+    <meta name="description" content="Train yourself at making a musical environment." />
+    <!-- End SEO meta -->
+
+    <!-- IE meta -->
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <!-- End IE meta -->
+
+    <!-- Apple meta -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="Tempo" />
+    <!-- End Apple meta -->
+
+    <!-- Mobile meta -->
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <!-- End mobile meta -->
+
+    <!-- Facebook meta -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://tempo.zachary.pm/"/>
+    <meta property="og:title" content="Tempo"/>
+    <meta property="og:image" content="" />
+    <meta property="og:site_name" content=""/>
+    <meta property="og:description" content="Train yourself at making a musical environment. #H3P2018"/>
+    <!-- End Facebook meta -->
+
+    <!-- build:css -->
+    <link rel="stylesheet" href="stylesheets/main.css" />
+    <!-- endbuild -->
+  </head>
+
+  <body>
+
+    <div class="errorPane">
+      <div class="wrapper">
+        <h2>Something Wrong Happened.</h2>
+        <span class="errorPane__message"></span>
+        <p>Please hit refresh or come back later!</p>
+      </div>
+    </div>
+
+    <div class="responsive-killer">
+      <p>TEMPO ain't designed to work on
+        smaller resolution than 1024 x 768 screen.
+
+      Please visit TEMPO on your desktop
+        or enhance this window!
+
+        <a href="http://tempo.zachary.pm">tempo.zachary.pm</a></p>
+    </div>
+
+    <main id="main" class="_the-main-wrapper"></main>
+
+    <!-- build:js -->
+    <script src="js/dist/vendor.js"></script>
+    <script src="js/dist/template.js"></script>
+    <script src="js/dist/app.js"></script>
+    <!-- endbuild -->
+
+    <script>
+
+      var app = {};
+
+      $(document).ready(function(){
+        app = new App();
+
+        (function tick(){
+          app.update();
+          window.requestAnimationFrame(tick);
+        })();
+
+      });
+
+    </script>
+
+  </body>
+</html>

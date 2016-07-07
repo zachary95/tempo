@@ -1,0 +1,26 @@
+$brightDubstepRed: #fe7f85;
+$deepDubstepRed: #f9464e;
+
+@include swaggalizeStyle('Dubstep',
+    $dubstepBeatSecond,
+    $deepDubstepRed,
+    $brightDubstepRed
+);
+
+@include swaggalizeStyle('Deephouse',
+    $deephouseBeatSecond,
+    $deephousePurple,
+    $brightDeephousePurple
+);
+
+@include swaggalizeStyle('Drumandbass',
+    $drumandbassBeatSecond,
+    $deepDrumAndBassPurple,
+    $deepDrumAndBassPurple
+);
+
+@include swaggalizeStyle('Future',
+    $futureBeatSecond,
+    $futureBlue,
+    #9be3fb
+);

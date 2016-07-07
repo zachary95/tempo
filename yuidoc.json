@@ -1,0 +1,12 @@
+{
+  "name": "Tempo",
+  "description": "Tempo API Doc. FTW!",
+  "version": "0.1.0",
+  "url": "http://tempo.zachary.pm/",
+  "options": {
+    "outdir": "./docs",
+    "exclude": "js/dist,js/vendor"
+  },
+  "themedir" : "node_modules/yuidoc-lucid-theme",
+  "helpers" : ["node_modules/yuidoc-lucid-theme/helpers/helpers.js"]
+}

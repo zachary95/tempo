@@ -1,0 +1,140 @@
+/**
+  * Make things bounce.
+  * @params : $beatInSecond
+  * @mixin.
+**/
+
+@mixin makeItBounce($beatInSecond) {
+  animation: GrooveBeat #{$beatInSecond}s infinite linear;
+}
+
+
+/**
+  * Animate scene's shapes to beat.
+  * @params : $beatInSecond
+  * @mixin.
+**/
+
+@mixin animateToBeat($beatInSecond, $name) {
+  .#{to_lower_case($name)}Scene {
+    .sample__droppable.isPlaying {
+      .droppable__background {
+        &::after {
+          animation: GrooveWaves #{$beatInSecond}s infinite linear;
+        }
+        &::before {
+          animation: GrooveRotate #{$beatInSecond * 2}s infinite linear;
+        }
+      }
+    }
+
+    .the-scene.hasSample {
+      .scene__bouncer-circle,
+      .scene__bouncer-outline,
+      .scene__bouncer-outline-2,
+      .scene__bouncer-outline-3 {
+        animation: GrooveBeat #{$beatInSecond}s infinite linear;
+      }
+
+      .scene__bouncer-outline {
+        animation-delay: #{$beatInSecond * .1}s
+      }
+
+      .scene__bouncer-outline-2 {
+        animation-delay: #{$beatInSecond * .2}s;
+      }
+
+      .scene__bouncer-outline-3 {
+        animation-delay: #{$beatInSecond * .3}s
+      }
+
+      .scene__shape {
+        @include makeItBounce($beatInSecond );
+        .the-shape {
+          animation: MovingShape #{$beatInSecond * 32}s infinite linear;
+        }
+      }
+    }
+  }
+}
+
+@keyframes waveIsPulsing {
+  0% {
+    opacity: 1;
+    transform: scale(.7);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.4);
+  }
+}
+
+@keyframes GrooveBeat {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(.9);
+  }
+  50% {
+    transform: scale(1.03);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes MovingShape {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+/**
+  * Swaggalize genre to adapt their style according to the genre.
+  * @param : $name, $primaryColor, $secondaryColor
+  * @mixin
+*/
+
+@mixin swaggalizeStyle($name, $bpm, $primaryColor, $secondaryColor) {
+  @include animateToBeat($bpm, $name);
+
+  .#{to_lower_case($name)}Scene {
+    .sample-content .sample__section {
+      background-color: $primaryColor;
+    }
+
+    .sample__droppable {
+      span {
+        color: $primaryColor;
+      }
+      .droppable__background {
+        &::after,
+        &::before {
+          background: $secondaryColor;
+        }
+      }
+    }
+
+    .the-scene {
+      background: $primaryColor;
+      .scene__bouncer-name {
+        background: url('../img/#{$name}Play.png') center/contain no-repeat;
+      }
+      .scene__bouncer-circle {
+        background-color: #FFF;
+      }
+      .scene__bouncer-outline,
+      .scene__bouncer-outline-3,
+      .scene__bouncer-outline-2 {
+        border-color: #FFF;
+      }
+      .scene__shape .the-shape {
+        background: url('../img/#{$name}Shape.png') center/contain no-repeat;
+      }
+    }
+  }
+}

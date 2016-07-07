@@ -1,0 +1,217 @@
+._the-main-wrapper .soundExperience {
+  top: 0;
+  background-color: #FFF;
+  text-align: center;
+}
+
+.sample-content {
+  margin-top: 0.5%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  z-index: 999;
+  .sample__section {
+    width: 33%;
+    background-color: #999;
+    h5 {
+      text-align: center;
+      color: #FFF;
+      font-size: 1.8em;
+      text-transform: uppercase;
+      margin: 13px 0;
+    }
+    .sample-droppable-box {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 5%;
+    }
+  }
+}
+
+.sample__droppable {
+  position: relative;
+  width: 96px;
+  height: 96px;
+  .droppable__background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FFF;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+  }
+  span {
+    line-height: 100%;
+    transition: background-color 0.5s, color 0.5s;
+    color: #313131;
+    border-radius: 100%;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0 10px;
+  }
+}
+
+.the-scene {
+  display: flex;
+  height: 61%;
+  background: radial-gradient(circle closest-side at 50%, #FFF -50%, #CCC 200%);
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  .tuto {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 25px;
+    height: 25px;
+    z-index: 2000;
+    cursor: pointer;
+    background: url(/img/icon-help.svg) no-repeat;
+  }
+  .canvas-spectrum,
+  .canvas-particles {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 40;
+  }
+}
+
+.scene__bouncer {
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+  z-index: 60;
+  position: relative;
+  .scene__bouncer-name {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 100%;
+    margin: 0 auto;
+    z-index: 61;
+  }
+  .scene__bouncer-circle {
+    background-color: #999;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 100%;
+    margin: 0 auto;
+    z-index: 60;
+  }
+  .scene__bouncer-outline {
+    right: -20px;
+    top: -20px;
+    width: 290px;
+    height: 290px;
+    position: absolute;
+    border: 18px solid;
+    border-radius: 50%;
+    margin: 0 auto;
+    z-index: 60;
+  }
+  .scene__bouncer-outline-2 {
+    right: -29px;
+    top: -29px;
+    width: 308px;
+    height: 308px;
+    position: absolute;
+    border: 3px solid;
+    border-radius: 50%;
+    margin: 0 auto;
+    z-index: 60;
+  }
+  .scene__bouncer-outline-3 {
+    right: -36px;
+    top: -36px;
+    width: 322px;
+    height: 322px;
+    position: absolute;
+    border: 3px solid;
+    border-radius: 50%;
+    margin: 0 auto;
+    z-index: 60;
+  }
+  .scene__shape {
+    position: absolute;
+    width: 420px; height: 420px;
+    top: -60px; right: 0; left: -60px; bottom: 0;
+    z-index: 49;
+    opacity: .2;
+    .the-shape {
+      width: 370px;
+      height: 370px;
+    }
+  }
+}
+
+.scene__back-button {
+  position: absolute;
+  left: 20px;
+  top: 15px;
+  text-decoration: none;
+  color: #FFF;
+  opacity: 0.4;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: .8em;
+  z-index: 999;
+  &:focus {
+    outline: 0;
+  }
+}
+
+.scene-tuto {
+  display: none;
+  background-color: rgba(255, 255, 255, 0.8);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 1600;
+  border: 2px solid;
+  p {
+    padding: 0 30px;
+    top: 15%;
+    position: relative;
+    line-height: 25px;
+    b {
+      margin: 10px 0;
+      display: block;
+    }
+    span {
+      font-weight: bold;
+      margin-bottom: 20px;
+      display: block;
+      font-size: 20px;
+    }
+  }
+}
+
+.scene__volume {
+  position: absolute;
+  bottom: 30px; right: 0;
+  margin: auto;
+  transform: rotateZ(90deg);
+  height: 110px;
+  color: #FFF;
+  z-index: 999;
+  input {
+    -webkit-appearance: none;
+    background: #FFF;
+    height: 1px;
+    opacity: .7;
+    &:focus {
+      outline: 0;
+    }
+  }
+  label {
+    display: block;
+    text-align: right;
+    text-transform: uppercase;
+    font-size: 9px;
+    font-weight: bold;
+  }
+}

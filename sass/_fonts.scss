@@ -1,0 +1,13 @@
+// FONTS
+
+@font-face {
+  font-family: 'Brandon Grotesque Light';
+  src: url('../fonts/brandon-grotesque-light.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/brandon-grotesque-light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/brandon-grotesque-light.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/brandon-grotesque-light.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/brandon-grotesque-light.svg#354fd4633228a7e3ae69c73de8c58871') format('svg'); /* Legacy iOS */
+
+  font-style:   normal;
+  font-weight:  200;
+}

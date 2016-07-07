@@ -1,0 +1,25 @@
+._the-main-wrapper {
+  background: #FFF;
+  position: relative;
+  overflow: hidden;
+  section {
+    background: $grey;
+    position: absolute;
+    top: 50px;
+    bottom: 50px;
+    left: 50px;
+    right: 50px;
+    padding: 20px;
+  }
+  .logo__link {
+    display: block;
+    height: 17px; width: 108px;
+    background: url('../img/TEMPOLOGO.svg') center/contain no-repeat;
+    margin: 0 auto 10px;
+    text-indent: 101%;
+    overflow: hidden;
+    z-index: 9999;
+    position: relative;
+  }
+}
+
