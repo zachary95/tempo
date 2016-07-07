@@ -15,6 +15,7 @@ gulp.task('build', gulpSequence(
 	'js_app',
 	'js_libs',
 	'template',
+	'sass',
 	'sass_prod',
 	'js_app_prod',
 	'img_prod',
