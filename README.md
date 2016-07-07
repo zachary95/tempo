@@ -1,5 +1,5 @@
 #Tempo 
-[lien](http://tempo.zachary.pm/) | [docs](http://tempo.zachary.pm)
+[lien](http://tempo.zachary.pm/) | [docs](http://tempo.zachary.pm/docs)
 
 Tempo est un projet musical utilisant la [WebAudio API](https://developer.mozilla.org/fr/docs/Web/API/Web_Audio_API) permettant à l'utlisateur de créer un univers sonore à partir de sample de quatre styles prenant racine de l'éléctro : Future, Dubstep, Deephouse et Drum n' Bass.
 
@@ -13,6 +13,3 @@ Si vous désirez contribuer à Tempo, vous êtes officiellement incroyable. Pour
 	$ gulp build
 	
 Et c'est tout ! Par défaut, le Browser Sync est configuré sur `tempo.dev`. Si vous souhaitez changer ce paramètre, éditez la valeur `vhost` dans `gulp/config.js`.
-
-
-	
