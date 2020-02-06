@@ -45,10 +45,3 @@ bower_components
 .sass-cache
 *.css.map
 
-/build
-
-/docs
-
-/js/dist
-
-/stylesheets
